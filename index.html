@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amplop Diskusi Alkitab</title>
+<style>
+  body {
+    background: linear-gradient(135deg, #f8fbff, #e3f2fd);
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding: 40px 10px;
+  }
+
+  h1 {
+    color: #37474f;
+    margin-bottom: 20px;
+  }
+
+  p {
+    color: #607d8b;
+  }
+
+  .envelope-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+  }
+
+  .envelope {
+    position: relative;
+    width: 140px;
+    height: 100px;
+    background: #fdd835;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+  }
+
+  .envelope:hover {
+    transform: scale(1.05);
+  }
+
+  .flap {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background: #fbc02d;
+    top: 0;
+    left: 0;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    transition: transform 0.6s;
+    transform-origin: top;
+  }
+
+  .envelope.open .flap {
+    transform: rotateX(180deg);
+  }
+
+  .envelope.open {
+    background: #ffe082;
+  }
+
+  .envelope-number {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: white;
+    color: #37474f;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .question {
+    display: none;
+    background: #ffffff;
+    margin-top: 25px;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .envelope.open + .question {
+    display: block;
+    animation: fadeIn 0.8s;
+  }
+
+  @keyframes fadeIn {
+    from {opacity: 0; transform: translateY(-10px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
+
+  .verse {
+    color: #1e88e5;
+    margin-top: 10px;
+    font-style: italic;
+  }
+
+</style>
+</head>
+<body>
+
+<h1>💌 Amplop Diskusi Alkitab</h1>
+<p>Klik salah satu amplop untuk membuka pertanyaan refleksi dan bahan diskusi bersama teman-teman 📖</p>
+
+<div class="envelope-container">
+
+  <div class="envelope" onclick="openEnvelope(this)">
+    <div class="flap"></div>
+    <div class="envelope-number">1</div>
+  </div>
+  <div class="question">
+    <strong>Pertanyaan 1:</strong> Apa arti kasih sejati dalam persekutuan teman-teman seiman menurutmu?
+    <div class="verse">📖 1 Korintus 13:4-7</div>
+  </div>
+
+  <div class="envelope" onclick="openEnvelope(this)">
+    <div class="flap"></div>
+    <div class="envelope-number">2</div>
+  </div>
+  <div class="question">
+    <strong>Pertanyaan 2:</strong> Bagaimana kita bisa menggunakan kata-kata yang membangun dalam komunitas, bukan yang menjatuhkan?
+    <div class="verse">📖 Efesus 4:29</div>
+  </div>
+
+  <div class="envelope" onclick="openEnvelope(this)">
+    <div class="flap"></div>
+    <div class="envelope-number">3</div>
+  </div>
+  <div class="question">
+    <strong>Pertanyaan 3:</strong> Dalam hal apa kamu merasa Tuhan sedang mengajarkan kesabaran terhadap sesama?
+    <div class="verse">📖 Yakobus 1:3-4</div>
+  </div>
+
+  <div class="envelope" onclick="openEnvelope(this)">
+    <div class="flap"></div>
+    <div class="envelope-number">4</div>
+  </div>
+  <div class="question">
+    <strong>Pertanyaan 4:</strong> Bagaimana kita bisa menolong teman lain bertumbuh dalam iman?
+    <div class="verse">📖 Kolose 3:16-17</div>
+  </div>
+
+  <div class="envelope" onclick="openEnvelope(this)">
+    <div class="flap"></div>
+    <div class="envelope-number">5</div>
+  </div>
+  <div class="question">
+    <strong>Pertanyaan 5:</strong> Apa makna pengampunan dalam persahabatan rohani?
+    <div class="verse">📖 Matius 18:21-22</div>
+  </div>
+
+  <div class="envelope" onclick="openEnvelope(this)">
+    <div class="flap"></div>
+    <div class="envelope-number">6</div>
+  </div>
+  <div class="question">
+    <strong>Pertanyaan 6:</strong> Bagaimana kita menjaga kekudusan dalam komunitas agar tetap jadi terang bagi orang lain?
+    <div class="verse">📖 1 Tesalonika 4:3-5</div>
+  </div>
+
+  <div class="envelope" onclick="openEnvelope(this)">
+    <div class="flap"></div>
+    <div class="envelope-number">7</div>
+  </div>
+  <div class="question">
+    <strong>Pertanyaan 7:</strong> Dalam hal apa kita bisa belajar untuk lebih bersyukur sebagai kelompok kecil?
+    <div class="verse">📖 Filipi 4:6-7</div>
+  </div>
+
+  <div class="envelope" onclick="openEnvelope(this)">
+    <div class="flap"></div>
+    <div class="envelope-number">8</div>
+  </div>
+  <div class="question">
+    <strong>Pertanyaan 8:</strong> Apa bentuk nyata saling menopang dalam kehidupan persekutuan?
+    <div class="verse">📖 Galatia 6:2</div>
+  </div>
+
+</div>
+
+<script>
+function openEnvelope(el) {
+  if (el.classList.contains('open')) return; // jika sudah terbuka, jangan tutup lagi
+  el.classList.add('open');
+  window.scrollTo({ top: el.offsetTop + 150, behavior: 'smooth' });
+}
+</script>
+
+</body>
+</html>
